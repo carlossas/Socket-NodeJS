@@ -10,7 +10,7 @@ io.on('connection', (client) => {
 
     client.on('enviarMensaje', (data, callback) => {
         console.log(data);
-
+        //EL BROADCAST EMITE EL MENSAJE A TODAS LAS PERSONAS CONECTADAS AL SOCKET
         client.broadcast.emit('enviarMensaje', data);
         //SE DISPARA CUANDO RECIBE CORRECTAMENTE LA INFORMACION
 
